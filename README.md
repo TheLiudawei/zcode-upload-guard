@@ -102,7 +102,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File upload-guard\tests\smoke-tes
 # 弹窗按钮端到端自测（PerformClick 注入）
 powershell -NoProfile -ExecutionPolicy Bypass -File upload-guard\tests\e2e-button-test.ps1
 ```
+## 使用提示
 
+如果你是第一次使用，可能会出现较多的误报，请使用自带的白名单功能。
 > ⚠️ `upload-guard/hooks/inspect-upload.ps1` 含中文，必须保存为 **UTF-8 with BOM**，否则 Windows PowerShell 5.1 会按 ANSI 误读导致解析错误。编辑该文件后请确认 BOM 仍在（`Get-Content -Encoding Byte -TotalCount 3`）。
 
 ## 许可证
