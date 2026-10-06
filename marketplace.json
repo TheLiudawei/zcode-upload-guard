@@ -1,0 +1,17 @@
+{
+  "name": "zcode-upload-guard",
+  "plugins": [
+    {
+      "name": "upload-guard",
+      "source": "./upload-guard",
+      "version": "0.2.0",
+      "description": "Detects abnormal (unauthorized) data upload behavior in agent tool calls, warns with a top-right popup and lets the user intercept it with one click. Falls back to the host's native PreToolUse confirmation when no GUI is available.",
+      "displayName": "Upload Guard",
+      "displayName_i18n": { "zh-CN": "上传行为守卫" },
+      "description_i18n": { "zh-CN": "检测 Agent 工具调用中的异常（未授权）数据外发行为，右上角弹窗提示，可一键截获；无界面时回退 ZCode 原生确认。" },
+      "category": "developer-tools",
+      "author": { "name": "LIY" },
+      "keywords": ["zcode", "plugin", "security", "hooks", "pretooluse", "upload-guard"]
+    }
+  ]
+}

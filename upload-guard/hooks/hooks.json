@@ -1,0 +1,27 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|PowerShell|Write|Edit|ApplyPatch|NotebookEdit|WebFetch|WebSearch|web_search|mcp__.*",
+        "hooks": [
+          {
+            "type": "process",
+            "command": "powershell.exe",
+            "args": [
+              "-NoProfile",
+              "-NonInteractive",
+              "-ExecutionPolicy",
+              "Bypass",
+              "-WindowStyle",
+              "Hidden",
+              "-File",
+              "${CLAUDE_PLUGIN_ROOT}/hooks/inspect-upload.ps1"
+            ],
+            "timeoutMs": 45000,
+            "statusMessage": "Upload Guard 正在检查本次调用是否有数据外发行为…"
+          }
+        ]
+      }
+    ]
+  }
+}
